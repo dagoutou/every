@@ -7,7 +7,7 @@ type Player struct {
 	Leve int          `json:"leve"`
 	Exp  int          `json:"exp"`
 	Room int          `json:"room"`
-	Mq   chan Message `json:"msg"`
+	Mq   chan Message `json:"-"`
 }
 
 func NewPlayer() *Player {

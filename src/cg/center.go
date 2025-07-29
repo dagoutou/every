@@ -49,7 +49,7 @@ func (c *CenterServer) addPlayer(params string) error {
 func (c *CenterServer) broadcast(params string) error {
 	var msg Message
 	var err error
-	if err = json.Unmarshal([]byte(params), msg); err != nil {
+	if err = json.Unmarshal([]byte(params), &msg); err != nil {
 		return err
 	}
 	c.mutex.Lock()
